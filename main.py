@@ -24,6 +24,7 @@ def charger_fichier_json(exercice1):
     for data in json.load(open("exercice1.json")): # pour data dans le fichier json. charger(ouvrir le fichier)
         data = [] # la variable data est une liste
         return data # retourner les données de data
+        print(data)
 
 
 def afficher_donnees_brutes(data):
