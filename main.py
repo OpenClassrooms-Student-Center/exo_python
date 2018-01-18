@@ -2,7 +2,10 @@
 
 import json
 
-def charger_fichier_json(exercice1):
+def charger_fichier_json(url):
+    file = open (url)
+    data = json.load(file)
+
     """Charge le fichier json exercice1.json en mémoire.
 
     Cette fonction charge la structure de donnée contenue dans un fichier
@@ -18,13 +21,13 @@ def charger_fichier_json(exercice1):
     list | dict
         Structure de données contenant les données du fichier json.
     """
-
-
     # Charger les données de nom_fichier dans la variable data
-    for data in json.load(open("exercice1.json")): # pour data dans le fichier json. charger(ouvrir le fichier)
-        data = [] # la variable data est une liste
-        return data # retourner les données de data
-        print(data)
+
+        return data
+
+    structure = charger_fichier_json('exercice1.json')
+
+    print(structure[1])
 
 
 def afficher_donnees_brutes(data):
@@ -36,7 +39,8 @@ def afficher_donnees_brutes(data):
     data : list of string
         Collection contenant les données à afficher.
     """
-    pass
+    for ligne in structure:
+        print(ligne)
 
 
 def afficher_donnees_filtrees(data, chars_to_filter_out=["X"]):
