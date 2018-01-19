@@ -13,18 +13,14 @@ def afficher_donnees_brutes(data):
         print(ligne)
 
 def afficher_donnees_filtrees(data, chars_to_filter_out=["X"]):
-    data = json.load(json_file)
     for ligne in data:
         for lettre in chars_to_filter_out:
-            if lettre is chars_to_filter_out:
+            if lettre is in chars_to_filter_out:
                 pass
             else:
                 print(lettre)
 
-
-
 ######################################################
-
 
 structure = charger_fichier_json('exercice1.json')
 afficher_donnees_brutes(structure)
