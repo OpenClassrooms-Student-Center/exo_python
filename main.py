@@ -58,7 +58,7 @@ def afficher_donnees_filtrees(data, chars_to_filter_out=["X"]):
         # pr chaque lettre ds la ligne
         for lettre in ligne:
             # si la lettre est ds ma liste à filtrer
-            if lettre in chars_to_filter_out:
+            if lettre is chars_to_filter_out:
                 # je fais rien
                 pass
             # sinon
@@ -80,9 +80,9 @@ def afficher_donnees_filtrees(data, chars_to_filter_out=["X"]):
 def main():
     """Point d'entrée principal du programme."""
     structure = charger_fichier_json("exercice1.json")
-    afficher_donnees_brutes(structure)
+    afficher_donnees_brutes(data)
     print()# affichage d’un caractère de fin de ligne
-    afficher_donnees_filtrees(data)
+#    afficher_donnees_filtrees(data)
 
 if __name__ == "__main__":
     main()
