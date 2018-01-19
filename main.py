@@ -23,11 +23,7 @@ def charger_fichier_json(url):
     """
     # Charger les données de nom_fichier dans la variable data
 
-        return data
-
-    structure = charger_fichier_json('exercice1.json')
-
-    print(structure[1])
+    return data
 
 
 def afficher_donnees_brutes(data):
@@ -57,13 +53,35 @@ def afficher_donnees_filtrees(data, chars_to_filter_out=["X"]):
     chars_to_filter_out : list of strings
         Liste des caractères à éliminer avant affichage
     """
-    pass
+    # pr chaque ligne ds data
+    for ligne in data:
+        # pr chaque lettre ds la ligne
+        for lettre in chars_to_filter_out:
+            # si la lettre est ds ma liste à filtrer
+            if lettre is chars_to_filter_out=["X"]:
+                # je fais rien
+                pass
+            # sinon
+            elif:
+                # afficher la lettre
+                print(lettre)
+            # fin si (permet juste de bien visualiser où se termine la condition: ne pas en tenir compte ds le code def)
+        # fin pour (permet juste de bien visualiser où se termine la condition: ne pas en tenir compte ds le code def)
+        # espace à la fin de la ligne (et non à la fin de chaque lettre)
+    # fin pour (permet juste de bien visualiser où se termine la condition: ne pas en tenir compte ds le code def)
+
+# on aurait pu aussi dire
+# pr chaque ligne ds data
+    # afficher la ligne sans les X (il aurait alors fallu décomposer à nouveau cette ligne: parcourir la ligne lettre par lettre et ignorer les lettres à filtrer)
+# fin ligne pour
+
+# NE PAS HESITER À BIEN DÉCOMPOSER LES ÉTAPES
 
 def main():
     """Point d'entrée principal du programme."""
     structure = charger_fichier_json("exercice1.json")
-    afficher_donnees_brutes(data)
-    print()# affichage d’un caractère de fin de ligne
+    afficher_donnees_brutes(structure)
+    print(lettre)# affichage d’un caractère de fin de ligne
     afficher_donnees_filtrees(data)
 
 if __name__ == "__main__":
