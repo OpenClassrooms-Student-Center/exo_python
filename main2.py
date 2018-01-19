@@ -14,8 +14,8 @@ def afficher_donnees_brutes(data):
 
 def afficher_donnees_filtrees(data, chars_to_filter_out=["X"]):
     for ligne in data:
-        for lettre in chars_to_filter_out:
-            if lettre is in chars_to_filter_out:
+        for lettre in ligne:
+            if lettre is chars_to_filter_out:
                 pass
             else:
                 print(lettre)
@@ -24,4 +24,3 @@ def afficher_donnees_filtrees(data, chars_to_filter_out=["X"]):
 
 structure = charger_fichier_json('exercice1.json')
 afficher_donnees_brutes(structure)
-afficher_donnees_filtrees(data)

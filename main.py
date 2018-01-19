@@ -56,9 +56,9 @@ def afficher_donnees_filtrees(data, chars_to_filter_out=["X"]):
     # pr chaque ligne ds data
     for ligne in data:
         # pr chaque lettre ds la ligne
-        for lettre in chars_to_filter_out:
+        for lettre in ligne:
             # si la lettre est ds ma liste à filtrer
-            if lettre in chars_to_filter_out=["X"]:
+            if lettre in chars_to_filter_out:
                 # je fais rien
                 pass
             # sinon
