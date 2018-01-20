@@ -15,9 +15,10 @@ def afficher_liste(data):
     while i < len(data):
         print(data[i])
         i += 1
+# est ce qu'on aurait pu faire:
         #for elt in data:
         #print(elt)
-            #cette option ne fonctionne pas: rien ne s'affiche sur la console
+            #cette option ne fonctionne pas: pas de message d'erreur ms rien ne s'affiche sur la console
 
 def afficher_liste_filtree(data, chars_to_filter_out=["X"]):
     for ligne in data:
