@@ -3,8 +3,8 @@
 import json
 
 def charger_fichier_json(url):
-    file = open (url)
-    data = json.load(file)
+    json_file = open (url)
+    data = json.load(json_file)
 
     """Charge le fichier json exercice1.json en mémoire.
 
@@ -62,9 +62,9 @@ def afficher_donnees_filtrees(data, chars_to_filter_out=["X"]):
                 # je fais rien
                 pass
             # sinon
-        else:
+            else:
                 # afficher la lettre
-                print(lettre)
+                print(lettre, end="")
             # fin si (permet juste de bien visualiser où se termine la condition: ne pas en tenir compte ds le code def)
         # fin pour (permet juste de bien visualiser où se termine la condition: ne pas en tenir compte ds le code def)
         # espace à la fin de la ligne (et non à la fin de chaque lettre)
@@ -80,9 +80,9 @@ def afficher_donnees_filtrees(data, chars_to_filter_out=["X"]):
 def main():
     """Point d'entrée principal du programme."""
     structure = charger_fichier_json("exercice1.json")
-    afficher_donnees_brutes(data)
-    print()# affichage d’un caractère de fin de ligne
-#    afficher_donnees_filtrees(data)
+    afficher_donnees_brutes(structure)
+    print(".")# affichage d’un caractère de fin de ligne
+    afficher_donnees_filtrees(structure)
 
 if __name__ == "__main__":
     main()
