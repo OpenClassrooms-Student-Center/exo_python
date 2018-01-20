@@ -27,6 +27,7 @@ def afficher_liste_filtree(data, chars_to_filter_out=["X"]):
                 pass
             else:
                 print(lettre, end='')
+# ne fonctionne pas: pas de message d'erreur, la liste apparait avec les XX
 
 
 # aurait-on pu utiliser list.remove?
