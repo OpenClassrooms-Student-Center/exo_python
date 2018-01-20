@@ -2,7 +2,7 @@
 
 import json
 
-def charger_fichier_json(url):
+def charger_fichier_json(url): # fonction 
     json_file = open (url)
     data = json.load(json_file)
 
